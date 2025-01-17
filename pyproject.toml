@@ -1,0 +1,25 @@
+[project]
+name = "cron-py"
+version = "0.1.0"
+description = "Python bindings for the cron crate"
+readme = "README.md"
+authors = [
+    { name = "danielgafni", email = "danielgafni16@gmail.com" }
+]
+requires-python = ">=3.9"
+dependencies = []
+
+[tool.maturin]
+module-name = "cron._core"
+python-packages = ["cron"]
+python-source = "src"
+
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[dependency-groups]
+dev = [
+    "maturin>=1.8.1",
+    "pytest>=8.3.4",
+]
